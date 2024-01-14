@@ -13,5 +13,5 @@ uploads
 dist/
 scripts/
 push.sh
-firebase.json
+
 logs
