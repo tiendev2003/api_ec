@@ -7,6 +7,8 @@
     "start": "ts-node -r tsconfig-paths/register ./src/index.ts",
     "build": "tsc && tsc-alias",
     "start-watch": "nodemon",
+    "dev":"npm install && npm run build && npm run start-production",
+    
     "start-production": "node ./dist/src/index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },

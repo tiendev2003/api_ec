@@ -111,6 +111,7 @@ export class JWTAuthService {
 
   static verifyAccessToken(token: string): SafeResult<string> {
     try {
+      console.log(verifyToken(token, Config.ACCESS_TOKEN_PUBLIC_KEY).id)
       return {
         result: verifyToken(token, Config.ACCESS_TOKEN_PUBLIC_KEY).id as string,
         error: null,

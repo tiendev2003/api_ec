@@ -1,10 +1,10 @@
-import { Controller, Validate } from '@server/decorator';
-import { Request, Response } from 'express';
-import { AdminBody, adminSchema } from '../valid';
+import { AdminRole, getAdminServices } from '@/core/admin';
 import { createManager } from '@/core/admin/manager';
+import { Controller, Validate } from '@server/decorator';
 import { handleResultError, unwrapResult } from '@server/utils/errors';
 import { HttpStatus } from '@server/utils/status';
-import { AdminRole, getAdminServices } from '@/core/admin';
+import { Request, Response } from 'express';
+import { AdminBody, adminSchema } from '../valid';
 
 @Controller()
 class ManagerController {
@@ -17,6 +17,7 @@ class ManagerController {
       password: body.password,
       phone: body.phone,
     });
+    console.log(body)
     // if (manager.error) {
     //   if (manager.error instanceof ManagerExistError) {
     //     throw new RequestError(manager.error.message, HttpStatus.BadRequest);

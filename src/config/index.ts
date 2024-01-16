@@ -2,7 +2,7 @@ import dotenv from 'dotenv';
 import { join } from 'node:path';
 dotenv.config();
 const Config = {
-  PORT: process.env.port || 8080,
+  PORT: process.env.port || 7000,
   MONGODB_URI: process.env.MONGODB_URI ||"mongodb+srv://tien:toilaso1@cluster0.inww0ej.mongodb.net/ecom?retryWrites=true&w=majority",
   ACCESS_TOKEN_PRIVATE_KEY: process.env['ACCESS_TOKEN_PRIVATE_KEY']!,
   ACCESS_TOKEN_PUBLIC_KEY: process.env['ACCESS_TOKEN_PUBLIC_KEY']!,

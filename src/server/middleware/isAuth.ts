@@ -14,6 +14,7 @@ export async function isAuth(req: Request, _: Response, next: NextFunction) {
     if (splitHeader.length !== 2 && splitHeader[0] !== 'Bearer') {
       throw new RequestError('Invalid token format', HttpStatus.BadRequest);
     }
+    console.log("123")
     const userId = JWTAuthService.verifyAccessToken(splitHeader[1]);
     unwrapResult(userId, [ErrorType.InvalidToken, HttpStatus.Unauthorized]);
     req.userId = userId.result as string;
